@@ -261,6 +261,35 @@ body {
     margin-bottom: 24px;
 }
 
+.hero-malt-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #fc5656;
+    background: rgba(252, 86, 86, 0.1);
+    padding: 8px 16px;
+    border-radius: 100px;
+    border: 1px solid rgba(252, 86, 86, 0.3);
+    margin-bottom: 24px;
+    margin-left: 12px;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.hero-malt-btn:hover {
+    background: rgba(252, 86, 86, 0.2);
+    border-color: rgba(252, 86, 86, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(252, 86, 86, 0.2);
+}
+
+.hero-malt-btn svg {
+    fill: #fc5656;
+}
+
 .tag-dot {
     width: 8px;
     height: 8px;
