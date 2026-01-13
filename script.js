@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCursorGlow();
     initContactForm();
     initAnimations();
+    initLanguageSwitcher();
 });
 
 /**
@@ -242,4 +243,61 @@ function isInViewport(element) {
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
+}
+
+/**
+ * Initialize language switcher functionality.
+ * Handles FR/EN translations with localStorage persistence.
+ */
+function initLanguageSwitcher() {
+    const langSwitch = document.getElementById('langSwitch');
+    const langCurrent = langSwitch?.querySelector('.lang-switch-current');
+    
+    if (!langSwitch || !langCurrent) return;
+    
+    // Get saved language or default to French
+    let currentLang = localStorage.getItem('site-lang') || 'fr';
+    
+    // Apply saved language on load
+    applyTranslations(currentLang);
+    updateLangButton(currentLang);
+    
+    // Handle language switch
+    langSwitch.addEventListener('click', () => {
+        currentLang = currentLang === 'fr' ? 'en' : 'fr';
+        localStorage.setItem('site-lang', currentLang);
+        applyTranslations(currentLang);
+        updateLangButton(currentLang);
+    });
+    
+    function updateLangButton(lang) {
+        langCurrent.textContent = lang.toUpperCase();
+        document.documentElement.lang = lang;
+    }
+    
+    function applyTranslations(lang) {
+        if (typeof translations === 'undefined') {
+            console.warn('Translations not loaded');
+            return;
+        }
+        
+        const trans = translations[lang];
+        if (!trans) return;
+        
+        // Apply text translations
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (trans[key]) {
+                el.textContent = trans[key];
+            }
+        });
+        
+        // Apply HTML translations (for elements with <br>, <li>, <strong>, etc.)
+        document.querySelectorAll('[data-i18n-html]').forEach(el => {
+            const key = el.getAttribute('data-i18n-html');
+            if (trans[key]) {
+                el.innerHTML = trans[key];
+            }
+        });
+    }
 }

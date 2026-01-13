@@ -33,11 +33,18 @@
                 <span></span>
             </button>
             <ul class="nav-menu">
-                <li><a href="#about" class="nav-link">À propos</a></li>
-                <li><a href="#skills" class="nav-link">Compétences</a></li>
-                <li><a href="#experience" class="nav-link">Expérience</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">À propos</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+                <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Expérience</a></li>
                 <li><a href="#contact" class="nav-link nav-link--cta">Contact</a></li>
             </ul>
+            <button class="lang-switch" id="langSwitch" aria-label="Switch language">
+                <span class="lang-switch-current">FR</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+            </button>
         </div>
     </nav>
 
@@ -48,48 +55,50 @@
         </div>
         <div class="hero-container">
             <div class="hero-content">
-                <div class="hero-tag">
-                    <span class="tag-dot"></span>
-                    Disponible pour missions freelance
+                <div class="hero-badges">
+                    <div class="hero-tag">
+                        <span class="tag-dot"></span>
+                        <span data-i18n="hero.available">Disponible pour missions freelance</span>
+                    </div>
+                    <a href="https://www.malt.fr/profile/joeygalligani" target="_blank" rel="noopener" class="hero-malt-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22.225 12.14c-.104-.566-.418-1.282-1.253-1.282-.836 0-1.149.716-1.253 1.282-.418 2.353-1.566 3.813-3.604 4.59-1.044.388-2.193.507-3.342.507h-.06c-1.149 0-2.298-.12-3.342-.507-2.038-.777-3.186-2.237-3.604-4.59-.104-.566-.417-1.282-1.253-1.282-.835 0-1.149.716-1.253 1.282-.627 3.528-3.023 5.765-3.023 8.387 0 1.64 1.253 2.97 2.8 2.97h17.414c1.546 0 2.8-1.33 2.8-2.97-.002-2.622-2.398-4.86-3.027-8.387zM12.713.503c-2.298 0-4.16 1.895-4.16 4.232 0 2.338 1.862 4.232 4.16 4.232s4.16-1.894 4.16-4.232c0-2.337-1.862-4.232-4.16-4.232z"/>
+                        </svg>
+                        <span data-i18n="hero.malt">Voir mon profil Malt</span>
+                    </a>
                 </div>
-                <a href="https://www.malt.fr/profile/joeygalligani" target="_blank" rel="noopener" class="hero-malt-btn">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M22.225 12.14c-.104-.566-.418-1.282-1.253-1.282-.836 0-1.149.716-1.253 1.282-.418 2.353-1.566 3.813-3.604 4.59-1.044.388-2.193.507-3.342.507h-.06c-1.149 0-2.298-.12-3.342-.507-2.038-.777-3.186-2.237-3.604-4.59-.104-.566-.417-1.282-1.253-1.282-.835 0-1.149.716-1.253 1.282-.627 3.528-3.023 5.765-3.023 8.387 0 1.64 1.253 2.97 2.8 2.97h17.414c1.546 0 2.8-1.33 2.8-2.97-.002-2.622-2.398-4.86-3.027-8.387zM12.713.503c-2.298 0-4.16 1.895-4.16 4.232 0 2.338 1.862 4.232 4.16 4.232s4.16-1.894 4.16-4.232c0-2.337-1.862-4.232-4.16-4.232z"/>
-                    </svg>
-                    Voir mon profil Malt
-                </a>
                 <h1 class="hero-title">
                     <span class="title-line">Joey</span>
                     <span class="title-line title-line--accent">Galligani</span>
                 </h1>
                 <p class="hero-subtitle">
-                    <span class="typing-text">Consultant en Cybersécurité & DevOps</span>
+                    <span class="typing-text" data-i18n="hero.subtitle">Consultant en Cybersécurité & DevOps</span>
                 </p>
-                <p class="hero-description">
+                <p class="hero-description" data-i18n="hero.description">
                     Fort d'une expertise terrain en sécurité offensive et défensive, 
                     j'accompagne les entreprises par le conseil, l'audit et la formation pour 
                     transformer la cybersécurité en avantage stratégique.
                 </p>
                 <div class="hero-cta">
                     <a href="#contact" class="btn btn--primary">
-                        <span>Démarrer un projet</span>
+                        <span data-i18n="hero.cta1">Démarrer un projet</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
                     </a>
-                    <a href="#skills" class="btn btn--secondary">Découvrir mes services</a>
+                    <a href="#skills" class="btn btn--secondary" data-i18n="hero.cta2">Découvrir mes services</a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
                         <span class="stat-value">3+</span>
-                        <span class="stat-label">Années d'expérience</span>
+                        <span class="stat-label" data-i18n="hero.stat1">Années d'expérience</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-value">Ingénieurie</span>
-                        <span class="stat-label">& conseil</span>
+                        <span class="stat-value" data-i18n="hero.stat2val">Ingénieurie</span>
+                        <span class="stat-label" data-i18n="hero.stat2">& conseil</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-value">Cybersécurité</span>
+                        <span class="stat-value" data-i18n="hero.stat3val">Cybersécurité</span>
                         <span class="stat-label">& DevOps</span>
                     </div>
                 </div>
@@ -105,7 +114,7 @@
                         <div class="profile-info">
                             <div class="profile-status">
                                 <span class="status-indicator"></span>
-                                En ligne
+                                <span data-i18n="hero.online">En ligne</span>
                             </div>
                         </div>
                     </div>
@@ -126,21 +135,21 @@
     <section id="about" class="section about">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">01 / À propos</span>
-                <h2 class="section-title">Qui suis-je ?</h2>
+                <span class="section-tag" data-i18n="about.tag">01 / À propos</span>
+                <h2 class="section-title" data-i18n="about.title">Qui suis-je ?</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-lead">
+                    <p class="about-lead" data-i18n="about.lead">
                         Passionné par la cybersécurité et le développement, 
                         je combine expertise technique et pédagogie pour accompagner les entreprises.
                     </p>
-                    <p>
+                    <p data-i18n="about.p1">
                         Actuellement en MSc Pro Architecte des Systèmes d'Information spécialité 
                         Cybersécurité à <strong>EPITECH Montpellier</strong>, je travaille en parallèle 
                         comme Consultant Cybersécurité & DevSecOps chez <strong>Risk Hunter</strong>.
                     </p>
-                    <p>
+                    <p data-i18n="about.p2">
                         Mon approche pour vous: <strong>conseil stratégique, audits techniques et formation</strong>. 
                         J'aide les organisations à comprendre leurs risques et à monter en compétences 
                         pour mieux se protéger au quotidien.
@@ -153,8 +162,8 @@
                                 </svg>
                             </div>
                             <div class="highlight-text">
-                                <strong>Certifié</strong>
-                                <span>Sécurité des systèmes d'information - IMT Mines</span>
+                                <strong data-i18n="about.certified">Certifié</strong>
+                                <span data-i18n="about.certDesc">Sécurité des systèmes d'information - IMT Mines</span>
                             </div>
                         </div>
                         <div class="highlight">
@@ -164,8 +173,8 @@
                                 </svg>
                             </div>
                             <div class="highlight-text">
-                                <strong>Activités sur Root-Me</strong>
-                                <span>Challenges cybersécurité</span>
+                                <strong data-i18n="about.rootme">Activités sur Root-Me</strong>
+                                <span data-i18n="about.rootmeDesc">Challenges cybersécurité</span>
                             </div>
                         </div>
                     </div>
@@ -190,7 +199,7 @@
                                 <span class="terminal-prompt">$</span>
                                 <span class="terminal-command">cat skills.txt</span>
                             </div>
-                            <div class="terminal-output">
+                            <div class="terminal-output" data-i18n-html="terminal.skills">
                                 → Conseil & Accompagnement<br>
                                 → Formation & Sensibilisation<br>
                                 → Audit & Pentest<br>
@@ -198,9 +207,9 @@
                             </div>
                             <div class="terminal-line">
                                 <span class="terminal-prompt">$</span>
-                                <span class="terminal-command">echo $DISPONIBILITE</span>
+                                <span class="terminal-command" data-i18n="terminal.cmd3">echo $DISPONIBILITE</span>
                             </div>
-                            <div class="terminal-output terminal-output--success">Disponible pour vos projets_</div>
+                            <div class="terminal-output terminal-output--success" data-i18n="terminal.available">Disponible pour vos projets_</div>
                         </div>
                     </div>
                 </div>
@@ -211,8 +220,8 @@
     <section id="skills" class="section skills">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">02 / Compétences</span>
-                <h2 class="section-title">Mes domaines d'expertise</h2>
+                <span class="section-tag" data-i18n="skills.tag">02 / Compétences</span>
+                <h2 class="section-title" data-i18n="skills.title">Mes domaines d'expertise</h2>
             </div>
             <div class="skills-grid">
                 <article class="skill-card skill-card--blue">
@@ -225,13 +234,13 @@
                                 <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                             </svg>
                         </div>
-                        <span class="skill-tag">Accompagnement</span>
+                        <span class="skill-tag" data-i18n="skills.card1.tag">Accompagnement</span>
                     </div>
-                    <h3 class="skill-title">Conseil & Consulting</h3>
-                    <p class="skill-description">
+                    <h3 class="skill-title" data-i18n="skills.card1.title">Conseil & Consulting</h3>
+                    <p class="skill-description" data-i18n="skills.card1.desc">
                         Accompagnement stratégique pour renforcer votre posture de sécurité.
                     </p>
-                    <ul class="skill-list">
+                    <ul class="skill-list" data-i18n-html="skills.card1.list">
                         <li>Audit de maturité cyber</li>
                         <li>Analyse de risques & conformité</li>
                         <li>Définition de politiques de sécurité</li>
@@ -249,13 +258,13 @@
                                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
                             </svg>
                         </div>
-                        <span class="skill-tag">Pédagogie</span>
+                        <span class="skill-tag" data-i18n="skills.card2.tag">Pédagogie</span>
                     </div>
-                    <h3 class="skill-title">Formation & Sensibilisation</h3>
-                    <p class="skill-description">
+                    <h3 class="skill-title" data-i18n="skills.card2.title">Formation & Sensibilisation</h3>
+                    <p class="skill-description" data-i18n="skills.card2.desc">
                         Montée en compétences de vos équipes sur les enjeux cybersécurité.
                     </p>
-                    <ul class="skill-list">
+                    <ul class="skill-list" data-i18n-html="skills.card2.list">
                         <li>Sensibilisation aux risques cyber</li>
                         <li>Formation phishing & social engineering</li>
                         <li>Ateliers pratiques sécurité</li>
@@ -273,13 +282,13 @@
                                 <polyline points="8 6 2 12 8 18"/>
                             </svg>
                         </div>
-                        <span class="skill-tag">Développement</span>
+                        <span class="skill-tag" data-i18n="skills.card3.tag">Développement</span>
                     </div>
                     <h3 class="skill-title">DevOps & Dev</h3>
-                    <p class="skill-description">
+                    <p class="skill-description" data-i18n="skills.card3.desc">
                         Développement sécurisé et automatisation des pipelines CI/CD.
                     </p>
-                    <ul class="skill-list">
+                    <ul class="skill-list" data-i18n-html="skills.card3.list">
                         <li>Python, JavaScript, Bash</li>
                         <li>React, Node.js, FastAPI</li>
                         <li>Docker & Kubernetes</li>
@@ -297,13 +306,13 @@
                                 <circle cx="12" cy="12" r="3"/>
                             </svg>
                         </div>
-                        <span class="skill-tag">Technique</span>
+                        <span class="skill-tag" data-i18n="skills.card4.tag">Technique</span>
                     </div>
-                    <h3 class="skill-title">Audit & Pentest</h3>
-                    <p class="skill-description">
+                    <h3 class="skill-title" data-i18n="skills.card4.title">Audit & Pentest</h3>
+                    <p class="skill-description" data-i18n="skills.card4.desc">
                         Évaluation technique de votre sécurité et identification des vulnérabilités.
                     </p>
-                    <ul class="skill-list">
+                    <ul class="skill-list" data-i18n-html="skills.card4.list">
                         <li>Tests de pénétration (Pentest)</li>
                         <li>Audit d'architecture</li>
                         <li>Analyse de vulnérabilités</li>
@@ -319,8 +328,8 @@
     <section id="experience" class="section experience">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">03 / Parcours</span>
-                <h2 class="section-title">Expérience professionnelle</h2>
+                <span class="section-tag" data-i18n="exp.tag">03 / Parcours</span>
+                <h2 class="section-title" data-i18n="exp.title">Expérience professionnelle</h2>
             </div>
             <div class="timeline">
                 <article class="timeline-item">
@@ -330,12 +339,12 @@
                     </div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <span class="timeline-date">Déc. 2024 - Présent</span>
-                            <span class="timeline-badge">Alternance</span>
+                            <span class="timeline-date" data-i18n="exp.job1.date">Déc. 2024 - Présent</span>
+                            <span class="timeline-badge" data-i18n="exp.apprenticeship">Alternance</span>
                         </div>
-                        <h3 class="timeline-title">Ingénieur Cybersécurité & DevOps</h3>
-                        <p class="timeline-company">Risk Hunter, Paris (Télétravail)</p>
-                        <p class="timeline-description">
+                        <h3 class="timeline-title" data-i18n="exp.job1.title">Ingénieur Cybersécurité & DevOps</h3>
+                        <p class="timeline-company" data-i18n="exp.job1.company">Risk Hunter, Paris (Télétravail)</p>
+                        <p class="timeline-description" data-i18n="exp.job1.desc">
                             Développement et maintien des solutions de sécurité, automatisation 
                             des processus DevSecOps, et participation aux audits de sécurité.
                         </p>
@@ -349,12 +358,12 @@
                     </div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <span class="timeline-date">Juin 2023 - Août 2024</span>
-                            <span class="timeline-badge">Alternance</span>
+                            <span class="timeline-date" data-i18n="exp.job2.date">Juin 2023 - Août 2024</span>
+                            <span class="timeline-badge" data-i18n="exp.apprenticeship">Alternance</span>
                         </div>
-                        <h3 class="timeline-title">Technicien Réseaux & Services IT</h3>
+                        <h3 class="timeline-title" data-i18n="exp.job2.title">Technicien Réseaux & Services IT</h3>
                         <p class="timeline-company">Sietel Midi Télécom, Béziers</p>
-                        <p class="timeline-description">
+                        <p class="timeline-description" data-i18n="exp.job2.desc">
                             Déploiement et maintenance des infrastructures réseau, 
                             support technique et gestion des services informatiques.
                         </p>
@@ -367,12 +376,12 @@
                     </div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <span class="timeline-date">Fév. - Avril 2023</span>
-                            <span class="timeline-badge">Stage</span>
+                            <span class="timeline-date" data-i18n="exp.job3.date">Fév. - Avril 2023</span>
+                            <span class="timeline-badge" data-i18n="exp.internship">Stage</span>
                         </div>
-                        <h3 class="timeline-title">Développeur Web</h3>
+                        <h3 class="timeline-title" data-i18n="exp.job3.title">Développeur Web</h3>
                         <p class="timeline-company">Accès Réseau, Coursan</p>
-                        <p class="timeline-description">
+                        <p class="timeline-description" data-i18n="exp.job3.desc">
                             Conception et développement d'applications web, 
                             intégration frontend et backend.
                         </p>
@@ -386,18 +395,18 @@
                         <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
                         <path d="M6 12v5c3 3 9 3 12 0v-5"/>
                     </svg>
-                    Formation
+                    <span data-i18n="exp.education">Formation</span>
                 </h3>
                 <div class="education-grid">
                     <div class="education-item">
                         <span class="education-year">2024 - 2026</span>
                         <h4>MSc Pro Architecte SI</h4>
-                        <p>Spécialité Cybersécurité - EPITECH Montpellier</p>
+                        <p data-i18n="exp.edu1.desc">Spécialité Cybersécurité - EPITECH Montpellier</p>
                     </div>
                     <div class="education-item">
                         <span class="education-year">2021 - 2024</span>
-                        <h4>BUT Réseaux & Télécommunications</h4>
-                        <p>Spécialités IoT et Cybersécurité - IUT Béziers</p>
+                        <h4 data-i18n="exp.edu2.title">BUT Réseaux & Télécommunications</h4>
+                        <p data-i18n="exp.edu2.desc">Spécialités IoT et Cybersécurité - IUT Béziers</p>
                     </div>
                 </div>
             </div>
@@ -409,10 +418,10 @@
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <div class="section-header">
-                        <span class="section-tag">04 / Contact</span>
-                        <h2 class="section-title">Travaillons ensemble</h2>
+                        <span class="section-tag" data-i18n="contact.tag">04 / Contact</span>
+                        <h2 class="section-title" data-i18n="contact.title">Travaillons ensemble</h2>
                     </div>
-                    <p class="contact-description">
+                    <p class="contact-description" data-i18n="contact.desc">
                         Besoin d'un audit, d'une formation ou d'un accompagnement cyber ? 
                         Je suis disponible les week-ends et en soirée pour discuter de vos besoins.
                     </p>
@@ -436,7 +445,7 @@
                                 </svg>
                             </div>
                             <div class="contact-method-text">
-                                <span class="contact-method-label">Téléphone</span>
+                                <span class="contact-method-label" data-i18n="contact.phone">Téléphone</span>
                                 <span class="contact-method-value">06 11 96 71 11</span>
                             </div>
                         </a>
@@ -465,7 +474,7 @@
                 <div class="contact-form-wrapper">
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
-                            <label for="name" class="form-label">Nom</label>
+                            <label for="name" class="form-label" data-i18n="contact.form.name">Nom</label>
                             <input type="text" id="name" name="name" class="form-input" required>
                         </div>
                         <div class="form-group">
@@ -473,15 +482,15 @@
                             <input type="email" id="email" name="email" class="form-input" required>
                         </div>
                         <div class="form-group">
-                            <label for="subject" class="form-label">Sujet</label>
+                            <label for="subject" class="form-label" data-i18n="contact.form.subject">Sujet</label>
                             <select id="subject" name="subject" class="form-input form-select">
-                                <option value="">Sélectionnez un sujet</option>
-                                <option value="consulting">Conseil & Accompagnement</option>
-                                <option value="formation">Formation & Sensibilisation</option>
-                                <option value="audit">Audit de sécurité</option>
-                                <option value="pentest">Test de pénétration</option>
+                                <option value="" data-i18n="contact.form.selectSubject">Sélectionnez un sujet</option>
+                                <option value="consulting" data-i18n="contact.form.opt1">Conseil & Accompagnement</option>
+                                <option value="formation" data-i18n="contact.form.opt2">Formation & Sensibilisation</option>
+                                <option value="audit" data-i18n="contact.form.opt3">Audit de sécurité</option>
+                                <option value="pentest" data-i18n="contact.form.opt4">Test de pénétration</option>
                                 <option value="devops">DevOps / DevSecOps</option>
-                                <option value="other">Autre</option>
+                                <option value="other" data-i18n="contact.form.opt6">Autre</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -489,7 +498,7 @@
                             <textarea id="message" name="message" class="form-input form-textarea" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn--primary btn--full">
-                            <span>Envoyer le message</span>
+                            <span data-i18n="contact.form.send">Envoyer le message</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
                             </svg>
@@ -505,19 +514,20 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <span class="logo-bracket">[</span>JG<span class="logo-bracket">]</span>
-                    <p>Cybersécurité & DevOps Freelance</p>
+                    <p data-i18n="footer.tagline">Cybersécurité & DevOps Freelance</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#about">À propos</a>
-                    <a href="#skills">Compétences</a>
-                    <a href="#experience">Expérience</a>
+                    <a href="#about" data-i18n="nav.about">À propos</a>
+                    <a href="#skills" data-i18n="nav.skills">Compétences</a>
+                    <a href="#experience" data-i18n="nav.experience">Expérience</a>
                     <a href="#contact">Contact</a>
                 </div>
-                <p class="footer-copy">© 2026 Joey Galligani. Tous droits réservés.</p>
+                <p class="footer-copy" data-i18n="footer.copy">© 2026 Joey Galligani. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
