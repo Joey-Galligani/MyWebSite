@@ -53,9 +53,6 @@ python -m http.server 8000
 
 # Using Node.js (npx)
 npx serve
-
-# Using PHP
-php -S localhost:8000
 ```
 
 Then navigate to `http://localhost:8000`
