@@ -675,6 +675,7 @@ body {
     background: var(--color-surface);
     border-radius: var(--radius-md);
     border: 1px solid var(--color-border);
+    position: relative;
 }
 
 .highlight-icon {
@@ -693,6 +694,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2px;
+    flex: 1;
 }
 
 .highlight-text strong {
@@ -703,6 +705,34 @@ body {
 .highlight-text span {
     font-size: 0.8125rem;
     color: var(--color-text-muted);
+}
+
+.highlight-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: var(--color-primary);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+    margin-left: auto;
+    opacity: 0.9;
+}
+
+.highlight-link svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.5;
+}
+
+.highlight-link:hover {
+    color: var(--color-primary);
+    background: var(--color-primary-dim);
+    transform: translateX(2px);
+    opacity: 1;
 }
 
 .about-terminal {
