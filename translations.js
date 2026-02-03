@@ -8,6 +8,7 @@ const translations = {
         // Hero
         "hero.available": "Disponible pour missions freelance",
         "hero.malt": "Voir mon profil Malt",
+        "hero.linkedin": "Mon LinkedIn",
         "hero.subtitle": "Consultant en Cybersécurité & DevOps",
         "hero.description": "Fort d'une expertise terrain en sécurité offensive et défensive, j'accompagne les entreprises par le conseil, l'audit et la formation pour transformer la cybersécurité en avantage stratégique.",
         "hero.cta1": "Démarrer un projet",
@@ -102,6 +103,7 @@ const translations = {
         // Hero
         "hero.available": "Available for freelance missions",
         "hero.malt": "View my Malt profile",
+        "hero.linkedin": "My LinkedIn",
         "hero.subtitle": "Cybersecurity & DevOps Consultant",
         "hero.description": "With hands-on expertise in offensive and defensive security, I help businesses through consulting, auditing, and training to turn cybersecurity into a strategic advantage.",
         "hero.cta1": "Start a project",

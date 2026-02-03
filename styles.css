@@ -284,11 +284,13 @@ body {
 }
 
 .hero-badges {
-    display: flex;
-    flex-wrap: wrap;
+    display: inline-flex;
+    flex-wrap: nowrap;
     align-items: center;
     gap: 12px;
     margin-bottom: 24px;
+    width: fit-content;
+    max-width: 100%;
 }
 
 .hero-tag {
@@ -330,6 +332,33 @@ body {
 
 .hero-malt-btn svg {
     fill: #fc5656;
+}
+
+.hero-linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #0a66c2;
+    background: rgba(10, 102, 194, 0.12);
+    padding: 8px 16px;
+    border-radius: 100px;
+    border: 1px solid rgba(10, 102, 194, 0.35);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.hero-linkedin-btn:hover {
+    background: rgba(10, 102, 194, 0.2);
+    border-color: rgba(10, 102, 194, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(10, 102, 194, 0.25);
+}
+
+.hero-linkedin-btn svg {
+    fill: #0a66c2;
 }
 
 .tag-dot {
@@ -1424,6 +1453,10 @@ body {
 @media (max-width: 480px) {
     .container {
         padding: 0 16px;
+    }
+    
+    .hero-badges {
+        flex-wrap: wrap;
     }
     
     .hero-tag {
