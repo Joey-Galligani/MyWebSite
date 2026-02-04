@@ -284,7 +284,7 @@ body {
 }
 
 .hero-badges {
-    display: inline-flex;
+    display: flex;
     flex-wrap: nowrap;
     align-items: center;
     gap: 12px;
@@ -293,10 +293,18 @@ body {
     max-width: 100%;
 }
 
+.hero-badges-container {
+    display: inline-flex;
+    width: fit-content;
+    flex-shrink: 0;
+}
+
 .hero-tag {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    width: fit-content;
+    flex-shrink: 0;
     font-family: var(--font-mono);
     font-size: 0.75rem;
     font-weight: 500;
@@ -311,6 +319,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    width: fit-content;
     font-family: var(--font-mono);
     font-size: 0.75rem;
     font-weight: 500;
@@ -338,6 +347,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    width: fit-content;
     font-family: var(--font-mono);
     font-size: 0.75rem;
     font-weight: 500;
