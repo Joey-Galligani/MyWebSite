@@ -32,7 +32,7 @@ const translations = {
         "about.rootmeDesc": "Challenges cybersécurité",
         
         // Terminal
-        "terminal.skills": "→ Conseil & Accompagnement<br>→ Formation & Sensibilisation<br>→ Audit & Pentest<br>→ DevSecOps & Cloud",
+        "terminal.skills": "→ Threat Detection & Incident Response (SIEM / EDR / XDR)<br>→ Threat Hunting & IOC / TTP Analysis (MITRE ATT&CK)<br>→ DFIR & Log Analysis (Windows / Linux / AD)<br>→ Vulnerability Assessment & Pentesting<br>→ DevSecOps & Secure CI/CD (SAST / DAST / Secrets / Supply Chain)<br>→ Hardening, Network Security & Cloud Security",
         "terminal.cmd3": "echo $DISPONIBILITE",
         "terminal.available": "Disponible pour vos projets_",
         
