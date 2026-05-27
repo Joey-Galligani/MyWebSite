@@ -21,6 +21,10 @@
 </head>
 <body>
     <div class="cursor-glow"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
     
     <nav class="navbar">
         <div class="nav-container">
@@ -50,6 +54,9 @@
 
     <header class="hero">
         <div class="hero-bg">
+            <div class="aurora aurora--1"></div>
+            <div class="aurora aurora--2"></div>
+            <div class="aurora aurora--3"></div>
             <div class="grid-overlay"></div>
             <div class="scanline"></div>
         </div>
@@ -77,9 +84,9 @@
                         </a>
                     </div>
                 </div>
-                <h1 class="hero-title">
-                    <span class="title-line">Joey</span>
-                    <span class="title-line title-line--accent">Galligani</span>
+                <h1 class="hero-title" data-text="Joey Galligani">
+                    <span class="title-line" data-split>Joey</span>
+                    <span class="title-line title-line--accent" data-split>Galligani</span>
                 </h1>
                 <p class="hero-subtitle">
                     <span class="typing-text" data-i18n="hero.subtitle">Ingénieur en Cybersécurité & DevOps</span>
@@ -89,13 +96,13 @@
                     je surveille, analyse et réponds aux incidents de cybersécurité afin de protéger les systèmes d’information contre les menaces.
                 </p>
                 <div class="hero-cta">
-                    <a href="#contact" class="btn btn--primary">
+                    <a href="#contact" class="btn btn--primary" data-magnetic>
                         <span data-i18n="hero.cta1">Démarrer un projet</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
                     </a>
-                    <a href="#skills" class="btn btn--secondary" data-i18n="hero.cta2">Découvrir mes services</a>
+                    <a href="#skills" class="btn btn--secondary" data-i18n="hero.cta2" data-magnetic>Découvrir mes services</a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
@@ -140,6 +147,31 @@
             <div class="scroll-line"></div>
         </div>
     </header>
+
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <div class="marquee-group">
+                <span class="marquee-item">Threat Detection</span><span class="marquee-sep">/</span>
+                <span class="marquee-item">SIEM &amp; EDR</span><span class="marquee-sep">/</span>
+                <span class="marquee-item">Incident Response</span><span class="marquee-sep">/</span>
+                <span class="marquee-item">MITRE ATT&amp;CK</span><span class="marquee-sep">/</span>
+                <span class="marquee-item">DevSecOps</span><span class="marquee-sep">/</span>
+                <span class="marquee-item">Penetration Testing</span><span class="marquee-sep">/</span>
+                <span class="marquee-item">Cloud Security</span><span class="marquee-sep">/</span>
+                <span class="marquee-item">Zero Trust</span><span class="marquee-sep">*</span>
+            </div>
+            <div class="marquee-group" aria-hidden="true">
+                <span class="marquee-item">Threat Detection</span><span class="marquee-sep">/</span>
+                <span class="marquee-item">SIEM &amp; EDR</span><span class="marquee-sep">/</span>
+                <span class="marquee-item">Incident Response</span><span class="marquee-sep">/</span>
+                <span class="marquee-item">MITRE ATT&amp;CK</span><span class="marquee-sep">/</span>
+                <span class="marquee-item">DevSecOps</span><span class="marquee-sep">/</span>
+                <span class="marquee-item">Penetration Testing</span><span class="marquee-sep">/</span>
+                <span class="marquee-item">Cloud Security</span><span class="marquee-sep">/</span>
+                <span class="marquee-item">Zero Trust</span><span class="marquee-sep">*</span>
+            </div>
+        </div>
+    </div>
 
     <section id="about" class="section about">
         <div class="container">
@@ -243,7 +275,7 @@
                 <h2 class="section-title" data-i18n="skills.title">Mes domaines d'expertise</h2>
             </div>
             <div class="skills-grid">
-                <article class="skill-card skill-card--blue">
+                <article class="skill-card skill-card--blue" data-tilt>
                     <div class="skill-card-header">
                         <div class="skill-icon">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -269,7 +301,7 @@
                     </ul>
                 </article>
 
-                <article class="skill-card skill-card--red">
+                <article class="skill-card skill-card--red" data-tilt>
                     <div class="skill-card-header">
                         <div class="skill-icon">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -293,7 +325,7 @@
                     </ul>
                 </article>
 
-                <article class="skill-card skill-card--dev">
+                <article class="skill-card skill-card--dev" data-tilt>
                     <div class="skill-card-header">
                         <div class="skill-icon">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -317,7 +349,7 @@
                     </ul>
                 </article>
 
-                <article class="skill-card skill-card--network">
+                <article class="skill-card skill-card--network" data-tilt>
                     <div class="skill-card-header">
                         <div class="skill-icon">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

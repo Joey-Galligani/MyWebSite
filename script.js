@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initScrollEffects();
     initCursorGlow();
+    initCustomCursor();
+    initScrollProgress();
+    initSplitText();
+    initMagneticButtons();
+    initTiltCards();
+    initHeroParallax();
     initContactForm();
     initAnimations();
     initLanguageSwitcher();
@@ -62,40 +68,51 @@ function initNavigation() {
 function initScrollEffects() {
     const observerOptions = {
         root: null,
-        rootMargin: '0px',
-        threshold: 0.1
+        rootMargin: '0px 0px -80px 0px',
+        threshold: 0.15
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.skill-card, .timeline-item, .education-item').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    const targets = document.querySelectorAll(
+        '.skill-card, .timeline-item, .education-item, .highlight, .contact-method, .section-header, .section-title, .about-text > *, .education'
+    );
+    targets.forEach(el => {
+        el.classList.add('reveal');
         observer.observe(el);
     });
 
     const style = document.createElement('style');
     style.textContent = `
-        .animate-in {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s var(--easing-out, ease), transform 0.8s var(--easing-out, ease);
+        }
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     `;
     document.head.appendChild(style);
 
     document.querySelectorAll('.skill-card').forEach((card, index) => {
-        card.style.transitionDelay = `${index * 0.1}s`;
+        card.style.transitionDelay = `${index * 80}ms`;
     });
 
     document.querySelectorAll('.timeline-item').forEach((item, index) => {
-        item.style.transitionDelay = `${index * 0.15}s`;
+        item.style.transitionDelay = `${index * 120}ms`;
+    });
+
+    document.querySelectorAll('.education-item, .highlight, .contact-method').forEach((item, index) => {
+        item.style.transitionDelay = `${index * 80}ms`;
     });
 }
 
@@ -221,15 +238,6 @@ function initAnimations() {
         });
     });
 
-    document.querySelectorAll('.skill-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-8px) scale(1.02)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
 }
 
 /**
@@ -243,6 +251,175 @@ function isInViewport(element) {
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
+}
+
+/**
+ * Custom cursor with smooth follower ring and dot, plus hover state
+ * on interactive elements. Falls back gracefully on touch devices.
+ */
+function initCustomCursor() {
+    const dot = document.querySelector('.cursor-dot');
+    const ring = document.querySelector('.cursor-ring');
+    if (!dot || !ring) return;
+    if (!window.matchMedia('(pointer: fine)').matches) return;
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let ringX = mouseX;
+    let ringY = mouseY;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+    });
+
+    function animate() {
+        ringX += (mouseX - ringX) * 0.18;
+        ringY += (mouseY - ringY) * 0.18;
+        ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)`;
+        requestAnimationFrame(animate);
+    }
+    animate();
+
+    const hoverables = 'a, button, .skill-card, .timeline-content, .education-item, .contact-method, .marquee-item, .terminal, [data-tilt]';
+    document.querySelectorAll(hoverables).forEach(el => {
+        el.addEventListener('mouseenter', () => ring.classList.add('is-hovering'));
+        el.addEventListener('mouseleave', () => ring.classList.remove('is-hovering'));
+    });
+}
+
+/**
+ * Update the top scroll progress bar based on current scroll position.
+ */
+function initScrollProgress() {
+    const bar = document.querySelector('.scroll-progress span');
+    if (!bar) return;
+
+    let ticking = false;
+    function update() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        bar.style.width = progress + '%';
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(update);
+            ticking = true;
+        }
+    }, { passive: true });
+    update();
+}
+
+/**
+ * Split text nodes marked with `data-split` into per-character spans
+ * to enable staggered reveal animations.
+ */
+function initSplitText() {
+    document.querySelectorAll('[data-split]').forEach(el => {
+        const text = el.textContent;
+        el.textContent = '';
+        const chars = Array.from(text);
+        chars.forEach((char, index) => {
+            const span = document.createElement('span');
+            span.className = char === ' ' ? 'char char--space' : 'char';
+            span.style.setProperty('--char-index', index);
+            span.textContent = char === ' ' ? '\u00A0' : char;
+            el.appendChild(span);
+        });
+    });
+}
+
+/**
+ * Add a subtle magnetic pull effect on hover for elements with
+ * `data-magnetic`. The element follows the cursor with a small offset.
+ */
+function initMagneticButtons() {
+    if (!window.matchMedia('(pointer: fine)').matches) return;
+    const strength = 0.25;
+    const elements = document.querySelectorAll('[data-magnetic]');
+
+    elements.forEach(el => {
+        el.addEventListener('mousemove', (e) => {
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            el.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
+        });
+
+        el.addEventListener('mouseleave', () => {
+            el.style.transform = '';
+        });
+    });
+}
+
+/**
+ * Tilt 3D effect on cards marked with `data-tilt`. Also drives a
+ * dynamic radial highlight that follows the mouse position.
+ */
+function initTiltCards() {
+    if (!window.matchMedia('(pointer: fine)').matches) return;
+    const maxTilt = 6;
+    document.querySelectorAll('[data-tilt]').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const px = x / rect.width;
+            const py = y / rect.height;
+            const rotateY = (px - 0.5) * (maxTilt * 2);
+            const rotateX = (0.5 - py) * (maxTilt * 2);
+            card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+}
+
+/**
+ * Subtle parallax movement on hero aurora blobs based on cursor and
+ * scroll position. Disabled on touch devices for performance.
+ */
+function initHeroParallax() {
+    const auroras = document.querySelectorAll('.aurora');
+    if (auroras.length === 0) return;
+
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+
+    if (window.matchMedia('(pointer: fine)').matches) {
+        hero.addEventListener('mousemove', (e) => {
+            const rect = hero.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width - 0.5;
+            const y = (e.clientY - rect.top) / rect.height - 0.5;
+            auroras.forEach((aurora, i) => {
+                const depth = (i + 1) * 20;
+                aurora.style.translate = `${x * depth}px ${y * depth}px`;
+            });
+        });
+    }
+
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                const scrollY = window.scrollY;
+                const heroVisual = document.querySelector('.hero-visual');
+                if (heroVisual && scrollY < window.innerHeight) {
+                    heroVisual.style.transform = `translateY(${scrollY * 0.12}px)`;
+                }
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
 }
 
 /**
