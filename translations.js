@@ -33,8 +33,8 @@ const translations = {
         
         // Terminal
         "terminal.skills": "→ Threat Detection & Incident Response (SIEM / EDR / XDR)<br>→ Threat Hunting & IOC / TTP Analysis (MITRE ATT&CK)<br>→ DFIR & Log Analysis (Windows / Linux / AD)<br>→ Vulnerability Assessment & Pentesting<br>→ DevSecOps & Secure CI/CD (SAST / DAST / Secrets / Supply Chain)<br>→ Hardening, Network Security & Cloud Security",
-        "terminal.cmd3": "echo $DISPONIBILITE",
-        "terminal.available": "Disponible pour vos projets_",
+        "terminal.cmd3": "cat disponibilite",
+        "terminal.available": "Disponible pour vos projets",
         
         // Skills
         "skills.tag": "02 / Compétences",
@@ -130,8 +130,8 @@ const translations = {
         
         // Terminal
         "terminal.skills": "→ Threat Detection & Incident Response (SIEM / EDR / XDR)<br>→ Threat Hunting & IOC / TTP Analysis (MITRE ATT&CK)<br>→ DFIR & Log Analysis (Windows / Linux / AD)<br>→ Vulnerability Assessment & Pentesting<br>→ DevSecOps & Secure CI/CD (SAST / DAST / Secrets / Supply Chain)<br>→ Hardening, Network Security & Cloud Security",
-        "terminal.cmd3": "echo $AVAILABILITY",
-        "terminal.available": "Available for your projects_",
+        "terminal.cmd3": "cat availability",
+        "terminal.available": "Available for your projects",
         
         // Skills
         "skills.tag": "02 / Skills",
