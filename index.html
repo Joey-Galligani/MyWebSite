@@ -39,6 +39,7 @@
             <ul class="nav-menu">
                 <li><a href="#about" class="nav-link" data-i18n="nav.about">À propos</a></li>
                 <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+                <li><a href="#projets" class="nav-link" data-i18n="nav.projects">Projets</a></li>
                 <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Expérience</a></li>
                 <li><a href="#contact" class="nav-link nav-link--cta">Contact</a></li>
             </ul>
@@ -193,40 +194,6 @@
                     <p data-i18n="about.p3">
                         Mon approche : détection, analyse, réponse et amélioration continue. J'identifie les menaces, traite les incidents de sécurité et contribue activement au durcissement des systèmes et des environnements.
                     </p>
-                    <div class="about-highlights">
-                        <div class="highlight">
-                            <div class="highlight-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                </svg>
-                            </div>
-                            <div class="highlight-text">
-                                <strong data-i18n="about.certified">Certifié</strong>
-                                <span data-i18n="about.certDesc">Sécurité des systèmes d'information - IMT Mines</span>
-                            </div>
-                            <a href="https://openbadgefactory.com/v1/assertion/148321e9075be97b799bfa96e5b38bd209f7475b.html" target="_blank" rel="noopener" class="highlight-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="highlight">
-                            <div class="highlight-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                                </svg>
-                            </div>
-                            <div class="highlight-text">
-                                <strong data-i18n="about.rootme">Activités sur Root-Me</strong>
-                                <span data-i18n="about.rootmeDesc">Challenges cybersécurité</span>
-                            </div>
-                            <a href="https://www.root-me.org/Joey_galli" target="_blank" rel="noopener" class="highlight-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
                 </div>
                 <div class="about-terminal">
                     <div class="terminal">
@@ -376,10 +343,158 @@
         </div>
     </section>
 
+    <section id="projets" class="section projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="projects.tag">03 / Réalisations</span>
+                <h2 class="section-title" data-i18n="projects.title">Projets & certifications</h2>
+            </div>
+
+            <div class="credentials">
+                <div class="highlight">
+                    <div class="highlight-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <div class="highlight-text">
+                        <strong data-i18n="about.certified">Certifié</strong>
+                        <span data-i18n="about.certDesc">Sécurité des systèmes d'information - IMT Mines</span>
+                    </div>
+                    <a href="https://openbadgefactory.com/v1/assertion/148321e9075be97b799bfa96e5b38bd209f7475b.html" target="_blank" rel="noopener" class="highlight-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="highlight">
+                    <div class="highlight-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <div class="highlight-text">
+                        <strong data-i18n="about.rootme">Activités sur Root-Me</strong>
+                        <span data-i18n="about.rootmeDesc">Challenges cybersécurité</span>
+                    </div>
+                    <a href="https://www.root-me.org/Joey_galli" target="_blank" rel="noopener" class="highlight-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <article class="skill-card project-card" data-tilt>
+                    <div class="project-card-top">
+                        <span class="project-lang">Python</span>
+                        <span class="project-stars">★ 1</span>
+                    </div>
+                    <h3 class="project-title" data-i18n="projects.p1.title">Serveur C2</h3>
+                    <p class="project-desc" data-i18n="projects.p1.desc">
+                        Serveur &amp; client C2 pour Windows : contournement de Windows Defender et persistance.
+                    </p>
+                    <a href="https://github.com/Joey-Galligani/C2" target="_blank" rel="noopener" class="project-link">
+                        <span data-i18n="projects.link">Voir le code</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H8M17 7v9"/>
+                        </svg>
+                    </a>
+                </article>
+
+                <article class="skill-card project-card" data-tilt>
+                    <div class="project-card-top">
+                        <span class="project-lang">Shell</span>
+                        <span class="project-stars">★ 1</span>
+                    </div>
+                    <h3 class="project-title" data-i18n="projects.p2.title">SIEM sur infrastructure GOAD</h3>
+                    <p class="project-desc" data-i18n="projects.p2.desc">
+                        Déploiement et configuration d'un SIEM sur une infra GOAD (Orange), validé par tests d'intrusion.
+                    </p>
+                    <a href="https://github.com/Joey-Galligani/Cybersecurity_Project" target="_blank" rel="noopener" class="project-link">
+                        <span data-i18n="projects.link">Voir le code</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H8M17 7v9"/>
+                        </svg>
+                    </a>
+                </article>
+
+                <article class="skill-card project-card" data-tilt>
+                    <div class="project-card-top">
+                        <span class="project-lang">Forensic</span>
+                        <span class="project-stars">★ 1</span>
+                    </div>
+                    <h3 class="project-title" data-i18n="projects.p3.title">Réponse à incident</h3>
+                    <p class="project-desc" data-i18n="projects.p3.desc">
+                        Détection d'attaques dans les logs puis analyse forensique de l'incident.
+                    </p>
+                    <a href="https://github.com/Joey-Galligani/Cyber-attack-response" target="_blank" rel="noopener" class="project-link">
+                        <span data-i18n="projects.link">Voir le code</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H8M17 7v9"/>
+                        </svg>
+                    </a>
+                </article>
+
+                <article class="skill-card project-card" data-tilt>
+                    <div class="project-card-top">
+                        <span class="project-lang">Web</span>
+                        <span class="project-stars">★ 1</span>
+                    </div>
+                    <h3 class="project-title" data-i18n="projects.p4.title">Veille cybersécurité</h3>
+                    <p class="project-desc" data-i18n="projects.p4.desc">
+                        Plateforme pour rester informé simplement de l'actualité cybersécurité.
+                    </p>
+                    <a href="https://github.com/Joey-Galligani/cybersecurity-information-monitoring" target="_blank" rel="noopener" class="project-link">
+                        <span data-i18n="projects.link">Voir le code</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H8M17 7v9"/>
+                        </svg>
+                    </a>
+                </article>
+
+                <article class="skill-card project-card" data-tilt>
+                    <div class="project-card-top">
+                        <span class="project-lang">Python</span>
+                        <span class="project-stars">★ 1</span>
+                    </div>
+                    <h3 class="project-title" data-i18n="projects.p5.title">Superviseur DHCP/DNS</h3>
+                    <p class="project-desc" data-i18n="projects.p5.desc">
+                        Application Python avec API pour superviser les services DHCP et DNS d'un réseau LAN.
+                    </p>
+                    <a href="https://github.com/Joey-Galligani/App_DHCP_DNS_Supervisor" target="_blank" rel="noopener" class="project-link">
+                        <span data-i18n="projects.link">Voir le code</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H8M17 7v9"/>
+                        </svg>
+                    </a>
+                </article>
+
+                <article class="skill-card project-card" data-tilt>
+                    <div class="project-card-top">
+                        <span class="project-lang">TypeScript</span>
+                        <span class="project-stars">★ 2</span>
+                    </div>
+                    <h3 class="project-title" data-i18n="projects.p6.title">bubulle</h3>
+                    <p class="project-desc" data-i18n="projects.p6.desc">
+                        Extension VS Code pour prendre des notes directement dans l'éditeur.
+                    </p>
+                    <a href="https://github.com/Joey-Galligani/bubulle" target="_blank" rel="noopener" class="project-link">
+                        <span data-i18n="projects.link">Voir le code</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H8M17 7v9"/>
+                        </svg>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <section id="experience" class="section experience">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag" data-i18n="exp.tag">03 / Parcours</span>
+                <span class="section-tag" data-i18n="exp.tag">04 / Parcours</span>
                 <h2 class="section-title" data-i18n="exp.title">Expérience professionnelle</h2>
             </div>
             <div class="timeline">
@@ -472,7 +587,7 @@
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <div class="section-header">
-                        <span class="section-tag" data-i18n="contact.tag">04 / Contact</span>
+                        <span class="section-tag" data-i18n="contact.tag">05 / Contact</span>
                         <h2 class="section-title" data-i18n="contact.title">Travaillons ensemble</h2>
                     </div>
                     <p class="contact-description" data-i18n="contact.desc">
@@ -573,6 +688,7 @@
                 <div class="footer-links">
                     <a href="#about" data-i18n="nav.about">À propos</a>
                     <a href="#skills" data-i18n="nav.skills">Compétences</a>
+                    <a href="#projets" data-i18n="nav.projects">Projets</a>
                     <a href="#experience" data-i18n="nav.experience">Expérience</a>
                     <a href="#contact">Contact</a>
                 </div>

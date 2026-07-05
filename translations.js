@@ -3,8 +3,9 @@ const translations = {
         // Navigation
         "nav.about": "À propos",
         "nav.skills": "Compétences",
+        "nav.projects": "Projets",
         "nav.experience": "Expérience",
-        
+
         // Hero
         "hero.available": "Disponible pour missions freelance",
         "hero.malt": "Voir mon profil Malt",
@@ -14,7 +15,7 @@ const translations = {
         "hero.cta1": "Démarrer un projet",
         "hero.cta2": "Découvrir mes services",
         "hero.stat1": "Années d'expérience",
-        "hero.stat2val": "Ingénieurie",
+        "hero.stat2val": "Ingénierie",
         "hero.stat2": "& conseil",
         "hero.stat3val": "Cybersécurité",
         "hero.online": "En ligne",
@@ -55,9 +56,26 @@ const translations = {
         "skills.card4.title": "Sécurité Infrastructure & Cloud",
         "skills.card4.desc": "Sécurisation des infrastructures et environnements cloud.",
         "skills.card4.list": "<li>Sécurité réseau & Segmentation</li><li>Hardening Linux/Windows/Active Directory</li><li>Gestion de vulnérabilités & Patch</li><li>AWS/Azure Security & IAM</li><li>Monitoring sécurité & Télémétrie</li><li>Architecture sécurisée & Zero Trust</li>",
-        
+
+        // Projects
+        "projects.tag": "03 / Réalisations",
+        "projects.title": "Projets & certifications",
+        "projects.link": "Voir le code",
+        "projects.p1.title": "Serveur C2",
+        "projects.p1.desc": "Serveur & client C2 pour Windows : contournement de Windows Defender et persistance.",
+        "projects.p2.title": "SIEM sur infrastructure GOAD",
+        "projects.p2.desc": "Déploiement et configuration d'un SIEM sur une infra GOAD (Orange), validé par tests d'intrusion.",
+        "projects.p3.title": "Réponse à incident",
+        "projects.p3.desc": "Détection d'attaques dans les logs puis analyse forensique de l'incident.",
+        "projects.p4.title": "Veille cybersécurité",
+        "projects.p4.desc": "Plateforme pour rester informé simplement de l'actualité cybersécurité.",
+        "projects.p5.title": "Superviseur DHCP/DNS",
+        "projects.p5.desc": "Application Python avec API pour superviser les services DHCP et DNS d'un réseau LAN.",
+        "projects.p6.title": "bubulle",
+        "projects.p6.desc": "Extension VS Code pour prendre des notes directement dans l'éditeur.",
+
         // Experience
-        "exp.tag": "03 / Parcours",
+        "exp.tag": "04 / Parcours",
         "exp.title": "Expérience professionnelle",
         "exp.apprenticeship": "Alternance",
         "exp.internship": "Stage",
@@ -77,7 +95,7 @@ const translations = {
         "exp.edu2.desc": "Spécialités IoT et Cybersécurité - IUT Béziers",
         
         // Contact
-        "contact.tag": "04 / Contact",
+        "contact.tag": "05 / Contact",
         "contact.title": "Travaillons ensemble",
         "contact.desc": "Besoin d'un audit, d'une formation ou d'un accompagnement cyber ? Je suis disponible les week-ends et en soirée pour discuter de vos besoins.",
         "contact.phone": "Téléphone",
@@ -100,6 +118,7 @@ const translations = {
         // Navigation
         "nav.about": "About",
         "nav.skills": "Skills",
+        "nav.projects": "Projects",
         "nav.experience": "Experience",
         
         // Hero
@@ -152,9 +171,26 @@ const translations = {
         "skills.card4.title": "Infrastructure & Cloud Security",
         "skills.card4.desc": "Infrastructure and cloud environment security.",
         "skills.card4.list": "<li>Network security & Segmentation</li><li>Linux/Windows/Active Directory hardening</li><li>Vulnerability & Patch management</li><li>AWS/Azure Security & IAM</li><li>Security monitoring & Telemetry</li><li>Secure architecture & Zero Trust</li>",
-        
+
+        // Projects
+        "projects.tag": "03 / Work",
+        "projects.title": "Projects & certifications",
+        "projects.link": "View code",
+        "projects.p1.title": "C2 Server",
+        "projects.p1.desc": "C2 server & client for Windows: Windows Defender bypass and persistence.",
+        "projects.p2.title": "SIEM on GOAD infrastructure",
+        "projects.p2.desc": "Deployment and configuration of a SIEM on a GOAD infra (Orange), validated by penetration testing.",
+        "projects.p3.title": "Incident response",
+        "projects.p3.desc": "Attack detection in logs followed by forensic analysis of the incident.",
+        "projects.p4.title": "Cybersecurity monitoring",
+        "projects.p4.desc": "A platform to easily stay informed about cybersecurity news.",
+        "projects.p5.title": "DHCP/DNS Supervisor",
+        "projects.p5.desc": "Python application with an API to supervise DHCP and DNS services on a LAN network.",
+        "projects.p6.title": "bubulle",
+        "projects.p6.desc": "VS Code extension to take notes directly in the editor.",
+
         // Experience
-        "exp.tag": "03 / Background",
+        "exp.tag": "04 / Background",
         "exp.title": "Professional Experience",
         "exp.apprenticeship": "Apprenticeship",
         "exp.internship": "Internship",
@@ -174,7 +210,7 @@ const translations = {
         "exp.edu2.desc": "IoT and Cybersecurity Specializations - IUT Béziers",
         
         // Contact
-        "contact.tag": "04 / Contact",
+        "contact.tag": "05 / Contact",
         "contact.title": "Let's work together",
         "contact.desc": "Need an audit, training, or cyber support? I'm available on weekends and evenings to discuss your needs.",
         "contact.phone": "Phone",

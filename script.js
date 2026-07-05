@@ -151,7 +151,7 @@ function initContactForm() {
         const originalText = submitBtn.innerHTML;
         
         submitBtn.innerHTML = `
-            <span>Envoi en cours...</span>
+            <span>Ouverture de votre messagerie...</span>
             <svg class="spinner" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="32">
                     <animate attributeName="stroke-dashoffset" values="32;0" dur="1s" repeatCount="indefinite"/>
@@ -160,7 +160,7 @@ function initContactForm() {
         `;
         submitBtn.disabled = true;
 
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        await new Promise(resolve => setTimeout(resolve, 400));
 
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
@@ -172,9 +172,10 @@ function initContactForm() {
         window.location.href = mailtoLink;
         
         submitBtn.innerHTML = `
-            <span>Message envoyé !</span>
+            <span>Votre messagerie va s'ouvrir</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5"/>
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="M22 6l-10 7L2 6"/>
             </svg>
         `;
         submitBtn.style.background = 'var(--color-primary)';

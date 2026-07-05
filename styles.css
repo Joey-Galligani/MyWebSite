@@ -1289,6 +1289,88 @@ body {
 .skill-card--red .skill-list li::before { background: var(--color-red); }
 .skill-card--network .skill-list li::before { background: var(--color-purple); }
 
+/* ===========================
+   PROJECTS
+   =========================== */
+.projects {
+    background: var(--color-bg-elevated);
+}
+
+.credentials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 56px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+}
+
+.project-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.project-lang {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    background: var(--color-primary-dim);
+    padding: 6px 12px;
+    border-radius: 100px;
+}
+
+.project-stars {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+
+.project-desc {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: gap var(--transition-fast);
+}
+
+.project-link:hover {
+    gap: 12px;
+}
+
 .experience {
     background: linear-gradient(180deg, var(--color-bg-elevated) 0%, var(--color-bg) 100%);
 }
@@ -2137,6 +2219,10 @@ body {
     
     .timeline-item {
         gap: 20px;
+    }
+
+    .credentials {
+        grid-template-columns: 1fr;
     }
 }
 
